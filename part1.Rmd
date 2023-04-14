@@ -24,6 +24,13 @@ av.new$Time2 = parse_number(av.new$Time2)
 #If Hulk is sent to the future and we follow his adventures there, he’s not dead.
 
 hulk = av.new %>% filter(Name.Alias == "Robert Bruce Banner", Return == "YES", Death == "YES")
-
+hulk
 #since Hulk has returned in the year he died, he's not dead.
 ```
+Tess' ?
+```{r}
+#If Iron Man fakes his death to chill out for a while but all his friends (and the reader) know he’s just kicking it somewhere, he didn’t die.
+ironman = av.new %>% filter(Name.Alias == "Anthony Edward Stark", Return == "NO", Death == "YES")
+ironman
+```
+Iron man died in avengers endgame and never returned 
