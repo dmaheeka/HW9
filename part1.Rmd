@@ -1,0 +1,29 @@
+---
+title: "Hw9_maheeka"
+author: "Maheeka"
+date: "2023-04-14"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+library(tidyverse)
+av <- read.csv("https://raw.githubusercontent.com/fivethirtyeight/data/master/avengers/avengers.csv", stringsAsFactors = FALSE)
+
+#av$Time = parse_number("Death1")
+
+#A.company = A %>% separate(Name, into = c("company", "name2"), sep = " ") %>% select(-name2)
+#av.new = av %>% separate(Death1, into = c("Death", "Time"), sep = " ") %>% separate(Return1, into = c("Return", "Time2"), sep = " ")
+#%>% mutate(Time = parse_number(Death))
+
+av.new <- av %>% gather(key = Time1, value = Death, c(11,13,15,17,19)) 
+
+av.new <- av.new %>% gather(key = Time2, value = Return, c(11,12,13,14,15))
+
+av.new$Time1 = parse_number(av.new$Time1)
+av.new$Time2 = parse_number(av.new$Time2)
+```
