@@ -34,3 +34,9 @@ ironman = av.new %>% filter(Name.Alias == "Anthony Edward Stark", Return == "NO"
 ironman
 ```
 Iron man died in avengers endgame and never returned 
+
+```{r}
+#leah pt 2: If Iron Man fakes his death to chill out for a while but all his friends (and the reader) know he’s just kicking it somewhere, he didn’t die.
+iron = av.new %>% filter(Name.Alias == "Tony Masters", Time1 == "1", Death == "NO")
+#he didn't die because the time 2 still occurs. 
+```
