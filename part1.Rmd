@@ -11,6 +11,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 ```{r}
+#TEAM MEMBERS: Tess Kern, Maheeka Devarakonda, Leah Greiner
+```
+
+
+```{r}
 library(tidyverse)
 av <- read.csv("https://raw.githubusercontent.com/fivethirtyeight/data/master/avengers/avengers.csv", stringsAsFactors = FALSE)
 
